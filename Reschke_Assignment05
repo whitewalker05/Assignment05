@@ -64,6 +64,22 @@ class BasicMathOperations:
 
     def type_of_argument(self, arg):
         return type(arg)
+# Test the class
+math = BasicMathOperations()
+math_ops.greet_user("Gage", "Reschke")
+print("Sum:", math_ops.add_numbers())
+print("Operation Result:", math_ops.perform_operation(10, 20, '-'))
+print("Square:", math_ops.square_number(2))
+print("Factorial:", math_ops.factorial(4))
+print("Counting:")
+math_ops.counting(1, 5)
+print("Hypotenuse:", math_ops.calculate_hypotenuse(3, 4))
+print("Area of Rectangle (values):", math_ops.area_of_rectangle(6, 6))
+width = 7
+height = 8
+print("Area of Rectangle (variables):", math_ops.area_of_rectangle(width, height))
+print("Power of Number:", math_ops.power_of_number(3, 2))
+print("Type of Argument:", math_ops.type_of_argument(1))
 
 
   
