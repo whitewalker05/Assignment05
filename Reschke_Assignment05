@@ -51,4 +51,19 @@ class BasicMathOperations:
     def calculate_square(self, num):
         return num * num
 
+    def calculate_hypotenuse(self, base, perpendicular):
+        base_square = self.calculate_square(base)
+        perpendicular_square = self.calculate_square(perpendicular)
+        return math.sqrt(base_square + perpendicular_square)
+
+    def area_of_rectangle(self, width, height):
+        return width * height
+
+    def power_of_number(self, base, exponent):
+        return base ** exponent
+
+    def type_of_argument(self, arg):
+        return type(arg)
+
+
   
