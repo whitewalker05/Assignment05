@@ -1,0 +1,86 @@
+class BasicMathOperations:
+    def greet_user(self, first_name, last_name):
+        full_name = f"{first_name} {last_name}"
+        print(f"Hello, {full_name}!")
+
+    def add_numbers(self):
+        try:
+            num1 = float(input("Enter the first number: "))
+            num2 = float(input("Enter the second number: "))
+            return num1 + num2
+        except ValueError:
+            print("Please enter valid numbers.")
+            return None
+
+    def perform_operation(self, num1, num2, operator):
+        try:
+            if operator == '+':
+                return num1 + num2
+            elif operator == '-':
+                return num1 - num2
+            elif operator == '*':
+                return num1 * num2
+            elif operator == '/':
+                if num2 == 0:
+                    return "Cannot divide by zero"
+                else:
+                    return num1 / num2
+            else:
+                return "Invalid operator"
+        except Exception as e:
+            return f"An error occurred: {e}"
+
+    def square_number(self, num):
+        return num * num
+
+    def factorial(self, num):
+        if num < 0:
+            return "Factorial is undefined for negative numbers."
+        result = 1
+        for i in range(1, num + 1):
+            result *= i
+        return result
+
+    def counting(self, start, end):
+        try:
+            for i in range(start, end + 1):
+                print(i)
+        except Exception as e:
+            return f"An error occurred: {e}"
+
+    def calculate_square(self, num):
+        return num * num
+
+    def calculate_hypotenuse(self, base, perpendicular):
+        try:
+            base_square = self.calculate_square(base)
+            perpendicular_square = self.calculate_square(perpendicular)
+            return (base_square + perpendicular_square) ** 0.5
+        except ValueError:
+            return "Invalid input for sides of the triangle"
+
+    def area_of_rectangle(self, width, height):
+        return width * height
+
+    def power_of_number(self, base, exponent):
+        return base ** exponent
+
+    def type_of_argument(self, arg):
+        return type(arg)
+
+# Test the class
+math_ops = BasicMathOperations()
+math_ops.greet_user("John", "Doe")
+print("Sum:", math_ops.add_numbers())
+print("Operation Result:", math_ops.perform_operation(5, 3, '+'))
+print("Square:", math_ops.square_number(4))
+print("Factorial:", math_ops.factorial(5))
+print("Counting:")
+math_ops.counting(1, 5)
+print("Hypotenuse:", math_ops.calculate_hypotenuse(3, 4))
+print("Area of Rectangle (values):", math_ops.area_of_rectangle(5, 6))
+width = 7
+height = 8
+print("Area of Rectangle (variables):", math_ops.area_of_rectangle(width, height))
+print("Power of Number:", math_ops.power_of_number(2, 3))
+print("Type of Argument:", math_ops.type_of_argument(10))
